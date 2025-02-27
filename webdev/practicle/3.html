@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+</head>
+<body>
+    <script>
+        // 1.  display even numbers from 1 to 20
+
+
+        function displayEvenNumbers() {
+            document.write("Even numbers from 1 to 20:<br>");
+            for (let i = 2; i <= 20; i += 2) {
+                document.write(i + " ");
+            }
+            document.write("<br><br>");
+        }
+        displayEvenNumbers();
+
+
+
+        // find factorial of a number
+
+
+
+        function factorial(num) {
+            let fact = 1;
+            for (let i = 1; i <= num; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+        let number = 3; 
+        document.write(`Factorial of ${number} is: ${factorial(number)}<br><br>`);
+
+
+
+        //  check if an input character is a vowel
+
+
+        function isVowel(char) {
+            if (char == 'a' || char =='e' || char == 'i' || char == 'o' || char == 'u' || 
+                char =='A' || char == 'E' || char == 'I' || char == 'O' || char == 'U') {
+                return true;
+            } 
+            else {
+                return false;
+            }
+        }
+        
+        let inputChar = 'a'; 
+        document.write(`${inputChar} is a vowel: ${isVowel(inputChar)}<br><br>`);
+        
+
+        //find the sum of all elements in an array
+
+
+        let numbersArray = [1, 2, 3, 4, 5];
+        function sumOfArray(arr) {
+            let sum = 0; 
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i]; 
+            }
+            return sum;
+        }
+        
+        
+        document.writeln("Sum of array elements: <br>" + sumOfArray(numbersArray));
+        document.write("<br><br>");
+        
+
+        // display only even elements from an array
+        
+        
+        function EvenNumbers(arr) {
+            document.writeln("Even elements from array: <br><br>");
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 == 0) {
+                    document.writeln(arr[i]);
+                }
+            }
+        }
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        EvenNumbers(arr);
+        
+        
+    </script>
+</body>
+</html>
